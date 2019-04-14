@@ -1,10 +1,23 @@
-console.log('html i css generator')
+console.log(`Zadanie domowe: ${new Date()}`)
 
 const helpers = require('./helpers')
 
 const maxOfElements = 5 // 4el
 let elementsCount1 = 3
-console.log(`Layout zawiera ${elementsCount1} elementy`)
+
+function direction(childrenCount) {
+    if (childrenCount > 0) {
+        let result = helpers.getRandomInt(2) // 0 lub 1
+        if (result === 0) return 'poziomo'
+        return 'pionowo'
+    }
+    return ''
+
+
+}
+
+
+console.log(`Layout zawiera ${elementsCount1} elementy ${direction(elementsCount1)}`)
 
 
 for (let i = 1; i <= elementsCount1; i++) {
@@ -36,5 +49,5 @@ function getFinalIndent(indent) {
 }
 
 function printElements(parentNumber, childrenCount, indent) {
-    console.log(`${getFinalIndent(indent)}Element ${parentNumber} zawiera ${childrenCount} el.`)
+    console.log(`${getFinalIndent(indent)}Element ${parentNumber} zawiera ${childrenCount} el. ${direction(childrenCount)}`)
 }
