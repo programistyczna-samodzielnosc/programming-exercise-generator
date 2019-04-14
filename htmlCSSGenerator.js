@@ -12,13 +12,9 @@ function direction(childrenCount) {
         return 'pionowo'
     }
     return ''
-
-
 }
 
-
 console.log(`Layout zawiera ${elementsCount1} elementy ${direction(elementsCount1)}`)
-
 
 for (let i = 1; i <= elementsCount1; i++) {
     let elementsCount2 = helpers.getRandomInt(maxOfElements)

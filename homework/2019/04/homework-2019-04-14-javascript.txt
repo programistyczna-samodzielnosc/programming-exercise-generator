@@ -1,0 +1,2 @@
+Liczba pozostałych zadan: 139
+Zaimplementuj funkcje invert
