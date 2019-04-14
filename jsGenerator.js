@@ -15,7 +15,8 @@ keys = keys.filter((name) => !allExceptions.includes(name))
 let nrZadania = helpers.getRandomInt(keys.length)
 
 console.log("Liczba pozostałych zadan: " + keys.length)
-console.log("Zaimplementuj funkcje " + keys[nrZadania])
+console.log("Zaimplementuj funkcje " + keys[nrZadania] + " z biblioteki underscore")
+console.log("https://underscorejs.org/")
 
 
 

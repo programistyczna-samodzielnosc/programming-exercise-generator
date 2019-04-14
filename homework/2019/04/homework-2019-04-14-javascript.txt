@@ -1,2 +1,4 @@
 Liczba pozostałych zadan: 139
-Zaimplementuj funkcje invert
+Zaimplementuj funkcje invert z biblioteki underscore
+https://underscorejs.org/
+
