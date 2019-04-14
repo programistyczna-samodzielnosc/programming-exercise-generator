@@ -1,19 +1,22 @@
 const underscore = require('underscore')
 
+
 let keys = Object.keys(underscore)
-let exceptions = ['VERSION','_'];
-keys = keys.filter((name)=> !exceptions.includes(name))
+let exceptions = ['VERSION', '_'];
 
-// console.log(keys.length)
-// console.log(keys);
+let pastExercises = [];
 
-//zrobic losowanie liczby od 1-139
+let allExceptions = exceptions.concat(pastExercises)
+
+keys = keys.filter((name) => !allExceptions.includes(name))
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-let nrZadania = getRandomInt(139)
+let nrZadania = getRandomInt(keys.length)
+
+console.log("Liczba pozostałych zadan: " + keys.length)
 
 console.log("Zaimplementuj funkcje " + keys[nrZadania])
 
