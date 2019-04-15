@@ -1,0 +1,3 @@
+Liczba pozostałych zadan: 139
+Zaimplementuj funkcje chunk z biblioteki underscore
+https://underscorejs.org/
