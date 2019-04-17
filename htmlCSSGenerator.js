@@ -23,16 +23,16 @@ for (let i = 1; i <= elementsCount1; i++) {
     for (let j = 1; j <= elementsCount2; j++) {
         let elementsCount3 = helpers.getRandomInt(maxOfElements)
         printElements(j, elementsCount3, 4)
-
-        for (let k = 1; k <= elementsCount3; k++) {
-            let elementsCount4 = helpers.getRandomInt(maxOfElements)
-            printElements(k, elementsCount4, 6)
+        //
+        // for (let k = 1; k <= elementsCount3; k++) {
+        //     let elementsCount4 = helpers.getRandomInt(maxOfElements)
+        //     printElements(k, elementsCount4, 6)
             //
             // for (let l = 1; l <= elementsCount4; l++) {
             //     let elementsCount5 = helpers.getRandomInt(maxOfElements)
             //     printElements(l, elementsCount5, 6)
             // }
-        }
+        // }
     }
 }
 

@@ -1,0 +1,3 @@
+Liczba pozostałych zadan: 136
+Zaimplementuj funkcje each z biblioteki underscore
+https://underscorejs.org/
