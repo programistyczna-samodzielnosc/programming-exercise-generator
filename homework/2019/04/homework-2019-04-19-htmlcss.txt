@@ -1,0 +1,12 @@
+Zadanie domowe: Fri Apr 19 2019 23:03:12 GMT+0200 (CEST)
+Layout zawiera 3 elementy poziomo
+-->Element 1 zawiera 4 el. poziomo
+---->Element 1 zawiera 4 el. poziomo
+---->Element 2 zawiera 0 el. 
+---->Element 3 zawiera 1 el. poziomo
+---->Element 4 zawiera 4 el. pionowo
+-->Element 2 zawiera 2 el. pionowo
+---->Element 1 zawiera 4 el. pionowo
+---->Element 2 zawiera 0 el. 
+-->Element 3 zawiera 1 el. poziomo
+---->Element 1 zawiera 2 el. poziomo

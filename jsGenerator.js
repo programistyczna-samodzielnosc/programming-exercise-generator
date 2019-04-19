@@ -6,7 +6,15 @@ const helpers = require('./helpers')
 let keys = Object.keys(underscore)
 let exceptions = ['VERSION', '_'];
 
-let pastExercises = ['invert','chunk','compact', 'each'];
+let pastExercises = [
+    'invert',
+    'chunk',
+    'compact',
+    'each',
+    'where',
+    'isBoolean',
+    'function'
+];
 
 let allExceptions = exceptions.concat(pastExercises)
 

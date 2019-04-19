@@ -1,0 +1,3 @@
+Liczba pozostałych zadan: 134
+Zaimplementuj funkcje functions z biblioteki underscore
+https://underscorejs.org/
