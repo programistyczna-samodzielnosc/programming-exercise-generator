@@ -1,0 +1,24 @@
+.layout {
+    display:flex;
+}
+
+.layout > div {
+    flex:1;
+}
+
+div {
+    border:1px solid red;
+    padding: 3px;
+}
+.edytor {
+    display: block;
+    border: 1px solid green;
+    width:100%;
+    box-sizing: border-box;
+}
+.przycisk_edytora {
+    display:block;
+    width:100%;
+    padding:0;
+    margin:0;
+}
