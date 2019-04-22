@@ -1,0 +1,17 @@
+Zadanie domowe: Mon Apr 22 2019 23:13:19 GMT+0200 (GMT+02:00)
+Stworz layout strony internetowej:
+dzieci pionowo;
+> element 1:  gradient; gradient; akapit tekstu;
+dzieci pionowo;
+--> element 1:  przycisk; przekreslony tekst; zmien rozmiar czcionki;
+--> element 2:  akapit tekstu; gradient; lista numerowana elementow;
+--> element 3:  ramka dookola; zmien kolor czcionki; przekreslony tekst;
+--> element 4:  akapit tekstu; akapit tekstu; akapit tekstu;
+> element 2:  ramka dookola; lista numerowana elementow; link do jakiejs strony;
+> element 3:  ramka dookola; lista numerowana elementow; gradient;
+> element 4:  kolor tla; przycisk; naglowek;
+dzieci pionowo;
+--> element 1:  link do jakiejs strony; lista numerowana elementow; gradient;
+--> element 2:  przekreslony tekst; ramka dookola; pogrubiony tekst;
+--> element 3:  zmien kolor czcionki; ramka dookola; kolor tla;
+--> element 4:  ramka dookola; naglowek; naglowek;

@@ -1,0 +1,3 @@
+Liczba pozostałych zadan: 132
+Zaimplementuj funkcje has z biblioteki underscore
+https://underscorejs.org/
