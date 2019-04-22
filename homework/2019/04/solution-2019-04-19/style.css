@@ -1,0 +1,57 @@
+div {
+    border:1px dotted red;
+    padding:5px;
+}
+
+
+.layout {
+    display:flex;
+}
+
+.layout > .section {
+    flex:1;
+}
+
+.pory_roku {
+    display: flex
+}
+
+.pora_roku {
+    flex:1
+}
+
+.wiosna {
+    display:flex;
+}
+.kwiatek {
+    flex:1;
+}
+
+.woda {
+    background-color: aqua;
+}
+.snieg {
+    color:white;
+}
+
+.dzien {
+    background-color:yellow;
+}
+.noc {
+    background-color: darkblue;
+    color: yellow;
+}
+.malzenstwo {
+    display:flex;
+}
+
+.malzonek {
+    flex:1;
+}
+
+.tata {
+    color: blue;
+}
+.mama {
+    color: pink;
+}
