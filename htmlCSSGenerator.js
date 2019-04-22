@@ -5,13 +5,10 @@ const helpers = require('./helpers')
 
 let elementsCount1 = 3
 
-function direction(childrenCount) {
-    if (childrenCount > 0) {
-        let result = helpers.getRandomInt(2) // 0 lub 1
-        if (result === 0) return 'poziomo'
-        return 'pionowo'
-    }
-    return ''
+function getDirection() {
+    let result = helpers.getRandomInt(2) // 0 lub 1
+    if (result === 0) return 'poziomo'
+    return 'pionowo'
 }
 
 //generujemy drzewko o trudnosci n (np 10)
@@ -23,17 +20,49 @@ function direction(childrenCount) {
 
 //kazdy node jest jakims elementem html i zadaniem do zrobienia
 
+let exerciseTypes = [
+    'ramka dookola',
+    'obrazek',
+    'lista numerowana elementow',
+    'lista nienumerowana elementow',
+    'naglowek',
+    'przycisk',
+    'zmien kolor czcionki',
+    'zmien rozmiar czcionki',
+    'gradient',
+    'kolor tla',
+    'pogrubiony tekst',
+    'przekreslony tekst',
+    'akapit tekstu',
+    'tekst z tlem obrazka',
+    'link do jakiejs strony'
+]
+
+function manyExercises(number=3) {
+    let output = '';
+    for(let i=0;i<number;i++){
+        let nrZadania = helpers.getRandomInt(exerciseTypes.length)
+        let trescZadania = exerciseTypes[nrZadania]
+        output += `${trescZadania}; `
+    }
+    return output;
+}
+
 function createTree(difficulty=4, maxOfBranches=3, indent=0) {
     if(difficulty === 0) {
-        // console.log('koniec')
         return
     }
 
-    for(let i=0; i<helpers.getRandomInt(maxOfBranches) + 2;i++) {
-        console.log(`${getFinalIndent(indent*2)} element ${i}`)
+    const numberOfBranches = helpers.getRandomInt(maxOfBranches) +2
+    let direction = ''
+    if(numberOfBranches>1) {
+        direction = `dzieci ${getDirection()};`
+        console.log(direction)
+    }
+    for(let i=0; i< numberOfBranches;i++) {
+        console.log(`${getFinalIndent(indent*2)} element ${i+1}:  ${manyExercises()}`)
         createTree(helpers.getRandomInt(difficulty), maxOfBranches, indent+1);   
     }
-
 }
 
 createTree()
