@@ -18,5 +18,8 @@ Program ktory umozliwia generawanie zadanek programistycznych różnych typów
 
 * zapisywanie przeszlych zadan w bazie danych
 * cos w rodzaju fiszek dla programowania
+
+
 * mozemy podac dowolny poziom zagniezdzania(rekurencja)
 * generowanie kolejnych losowych wlasciwosci css, np border, background-color, gradient itd
+* wiele typow zadan w jednym programie
