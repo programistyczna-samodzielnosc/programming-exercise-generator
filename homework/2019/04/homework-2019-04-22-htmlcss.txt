@@ -10,7 +10,7 @@ dzieci pionowo;
 > element 2:  ramka dookola; lista numerowana elementow; link do jakiejs strony;
 > element 3:  ramka dookola; lista numerowana elementow; gradient;
 > element 4:  kolor tla; przycisk; naglowek;
-dzieci pionowo;
+dzieci poziomo;
 --> element 1:  link do jakiejs strony; lista numerowana elementow; gradient;
 --> element 2:  przekreslony tekst; ramka dookola; pogrubiony tekst;
 --> element 3:  zmien kolor czcionki; ramka dookola; kolor tla;

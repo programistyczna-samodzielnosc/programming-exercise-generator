@@ -1,0 +1,55 @@
+.zwyciezca {
+    background:linear-gradient(gray, yellow);
+}
+.glod {
+    border:10px solid brown;
+}
+.wojna {
+    background:linear-gradient(brown,darkgreen,gray)
+}
+
+.smierc {
+    background-color:black;
+    color:white;
+    font-weight: bold;
+}
+.zloto button{
+    font-size:20px;
+    text-decoration: line-through;
+}
+
+.rydwany {
+    background: linear-gradient(brown, gold);
+    border:5px solid brown;
+}
+
+.dywany {
+    text-decoration: line-through;
+    font-size:30px;
+    border:5px solid blue;
+}
+
+.smierc_rodzaje {
+    display:flex;
+}
+.smierc_rodzaje>div{
+    flex:1;
+}
+
+.naturalna {
+    background: linear-gradient(lightblue,blue)
+}
+
+.glodowa {
+    text-decoration: line-through;
+    border: 20px solid red;
+    font-weight: bold;
+}
+.zawal {
+    color:white;
+    background: red;
+    border: 20px solid orange;
+}
+.rak {
+    border: 40px dotted red;
+}
