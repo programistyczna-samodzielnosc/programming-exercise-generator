@@ -1,0 +1,3 @@
+Liczba pozostałych zadan: 130
+Zaimplementuj funkcje now z biblioteki underscore
+https://underscorejs.org/

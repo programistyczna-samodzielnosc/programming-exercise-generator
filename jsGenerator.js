@@ -14,7 +14,8 @@ let pastExercises = [
     'where',
     'isBoolean',
     'functions',
-    'has'
+    'has',
+    'isFinite'
 ];
 
 let allExceptions = exceptions.concat(pastExercises)

@@ -1,0 +1,44 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.baner {
+    background: linear-gradient( #D46A6A, #FFAAAA, white);
+}
+
+.baner-opis {
+
+    color: #550000;
+    text-align:center;
+}
+.baner-naglowek {
+    color:black;
+    margin-bottom: 100px;
+
+}
+
+.napis {
+    text-decoration: line-through;
+}
+
+.centerek{
+    border: 2px solid black;
+    color: green;
+}
+
+.centerek:hover::after{
+    display:none;
+}
+
+
+
+
+.centerek::before {
+    content: 'chodz na biforka';
+    /* color: pink; */
+}
+.centerek::after{
+    /* display:block; */
+    content:'afterek';
+    /* color:red; */
+}
