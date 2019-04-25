@@ -1,0 +1,19 @@
+Hej, co do zadania w HTMLu, to elementy, które wylosował program do pierwszego elementu mają sens: gradient, kolor tła, gradient o ile tło będzie w Javie. 
+Funkcja generuje kolejne tła, np.: 
+gradien czerwony (na dole) - zielony (na górze), 
+tło całe na zielono, 
+gradient zielony (na dole), fioletowy (na górze) itd. 
+
+
+
+2. Kolejne tło wchodzi od góry i jest przedłużeniem koloru górnego aż cały ekran stanie się jednolitym tłem i następnie wchodzi kolejne tło, które jest gradientem i pierwszy kolor to kolor poprzedniego jednolitego tła i kolejnego innego koloru. Nie chodzi o to, żeby przenikały się, tylko żeby tworzyły jednolity ciąg, który będzie się przewijał.
+Jakby jeszcze funkcja sama losowała kolory z palety, to już byłoby w ogóle super.
+Nie wiem czy w ogóle coś takiego da się napisać, ale pewnie się da.
+
+
+Napisac funkcje ktora generuje kolejne tla
+- robimy losowanie
+- bez przycsiku, co jakis czas
+
+1 element - gradient zielono-czerwony
+

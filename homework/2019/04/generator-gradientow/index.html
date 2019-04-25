@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Generator Gradientow</title>
+    <style>
+        #nowyKolor {
+            background-color:black;
+            color:white;
+            font-size:30px;
+            font-weight: bold;
+            padding:20px;
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        // const colors = [
+        //     'red','green','black','yellow','pink',
+        //     'blue','brown','orange','indigo','gray'
+        // ]
+        const colors = [
+            'rgb(255,0,0)','rgb(0,255,0)','rgb(0,0,0)','rgb(255,255,0)','rgb(255,192,203)',
+            'rgb(0,0,255)','rgb(165,42,42)','rgb(255,165,0)','rgb(75,0,130)','rgb(128,128,128)'
+        ]
+
+        const rgbaColors = [
+            'rgba(255,0,0,0.5)','rgba(0,255,0,0.5)','rgba(0,0,0,0.5)','rgba(255,255,0,0.5)','rgba(255,192,203,0.5)',
+            'rgba(0,0,255,0.5)','rgba(165,42,42,0.5)','rgba(255,165,0,0.5)','rgba(75,0,130,0.5)','rgb(128,128,128)'
+        ]
+
+        function losujNumer(max) {
+            return Math.floor(Math.random() * Math.floor(max)); 
+        }
+
+        function nastepnyKolor () {
+            let liczba = losujNumer(10)
+            let kolor = colors[liczba]
+            let body = document.getElementById('body')
+            document.getElementById('nowyKolor').innerText=`${kolor}, ${liczba}`
+            if(nastepnyKolor.pamiec !== undefined) {
+                body.style.backgroundColor = "";
+                body.style.background=`linear-gradient(${kolor},${nastepnyKolor.pamiec})`
+                nastepnyKolor.pamiec = undefined;
+            } else {
+                body.style.background = "";
+                body.style.backgroundColor = kolor;
+                nastepnyKolor.pamiec=rgbaColors[liczba]
+            }
+            setTimeout(nastepnyKolor, 4000)
+        }
+
+        window.onload = nastepnyKolor
+    </script>
+</head>
+<body id="body">
+    <!-- <button onclick="nastepnyKolor()">Zmien kolor</button> -->
+    <div id="nowyKolor"></div>
+</body>
+</html>
