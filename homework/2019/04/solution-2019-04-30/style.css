@@ -1,0 +1,61 @@
+.layout{
+    display: flex;
+}
+.left{
+    display: flex;
+    background: linear-gradient( red, brown);
+    border:5px solid black;
+}
+.owoc {
+    flex: 1
+}
+
+.gruszka {
+    font-size: 20px;
+
+}
+
+.jablko {
+    text-decoration: line-through;
+    font-size:300%;
+}
+.banan {
+    font-size:64px;
+    background-color: yellow;
+    color: blue;
+}
+
+.wisnia {
+    font-size:10px;
+}
+.wisnia-obrazek {
+    max-width: 100%;
+}
+
+.right {
+    display:flex;
+}
+
+.salata {
+    text-decoration: line-through;
+    color: white;
+    width:100px;
+    height:100px;
+    background-size:cover;
+    background-position: center center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lactuca_sativa-whole_plant_top.JPG/1280px-Lactuca_sativa-whole_plant_top.JPG')
+}
+
+.kapusta {
+    writing-mode: vertical-lr;
+    text-orientation: upright; 
+    font-size:50px;
+    background-color: blueviolet;
+    color: yellow;
+    font-weight: bold;
+}
+
+.kalafior {
+    direction: rtl;
+    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet)
+}

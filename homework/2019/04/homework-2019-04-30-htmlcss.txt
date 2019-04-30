@@ -1,0 +1,22 @@
+layout
+
+dzieci poziomo;
+> element 1:  kolor tla; ramka dookola; gradient;
+dzieci poziomo;
+--> element 1:  zmien rozmiar czcionki; lista nienumerowana elementow; link do jakiejs strony;
+--> element 2:  lista numerowana elementow; przekreslony tekst; zmien rozmiar czcionki;
+--> element 3:  zmien rozmiar czcionki; kolor tla; zmien kolor czcionki;
+--> element 4:  obrazek; lista nienumerowana elementow; zmien rozmiar czcionki;
+> element 2:  lista nienumerowana elementow; przycisk; przekreslony tekst;
+dzieci poziomo;
+--> element 1:  tekst z tlem obrazka; przekreslony tekst; gradient;
+dzieci poziomo;
+----> element 1:  pogrubiony tekst; naglowek; przekreslony tekst;
+----> element 2:  ramka dookola; akapit tekstu; link do jakiejs strony;
+----> element 3:  tekst z tlem obrazka; link do jakiejs strony; tekst z tlem obrazka;
+--> element 2:  naglowek; zmien kolor czcionki; kolor tla;
+--> element 3:  gradient; zmien kolor czcionki; gradient;
+dzieci poziomo;
+----> element 1:  ramka dookola; gradient; naglowek;
+----> element 2:  link do jakiejs strony; gradient; naglowek;
+----> element 3:  akapit tekstu; naglowek; naglowek;
