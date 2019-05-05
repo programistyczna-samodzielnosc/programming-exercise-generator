@@ -1,35 +1,22 @@
-const underscore = require('underscore')
-
-const helpers = require('./helpers')
-
-
-let keys = Object.keys(underscore)
-let exceptions = ['VERSION', '_'];
-
-let pastExercises = [
-    'invert',
-    'chunk',
-    'compact',
-    'each',
-    'where',
-    'isBoolean',
-    'functions',
-    'has',
-    'isFinite'
-];
-
-let allExceptions = exceptions.concat(pastExercises)
-
-keys = keys.filter((name) => !allExceptions.includes(name))
-
-let nrZadania = helpers.getRandomInt(keys.length)
-
-console.log("Liczba pozostałych zadan: " + keys.length)
-console.log("Zaimplementuj funkcje " + keys[nrZadania] + " z biblioteki underscore")
-console.log("https://underscorejs.org/")
-
-
-
+function jsGenerator() {
+    const underscore = _
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+    
+    let keys = Object.keys(underscore)
+    let exceptions = ['VERSION', '_'];
+    
+    keys = keys.filter((name) => !exceptions.includes(name))
+    
+    let nrZadania = getRandomInt(keys.length)
+    let nazwaFunkcji = keys[nrZadania]
+    return `
+    <pre>Zaimplementuj funkcje "${nazwaFunkcji}" z biblioteki underscore</pre>
+    <a target="blank" href="https://underscorejs.org/#${nazwaFunkcji}">${nazwaFunkcji}</a>
+   
+   `;
+}
 
 
 

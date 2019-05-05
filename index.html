@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Stronka generujaca zadania</title>
         <style>
             pre {
@@ -11,7 +12,8 @@
             }
         </style>
         <script src="htmlCSSGenerator.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+        <script src="jsGenerator.js"></script>
         <script>
             function wyswietlZadanie(exerciseGenerator) {
                 let trescZadania = exerciseGenerator()
@@ -23,7 +25,7 @@
         <div class="losowanie">
             <h1>Losowanie</h1>
             <button onclick="wyswietlZadanie(htmlCssGenerator)">Zadanie HTML/CSS</button>
-            <button>Zadanie Javascript</button>
+            <button onclick="wyswietlZadanie(jsGenerator)">Zadanie Javascript</button>
             <div id="tresc">
                 Treść zadania
             </div>
