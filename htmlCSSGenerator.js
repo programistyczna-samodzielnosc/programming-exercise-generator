@@ -1,5 +1,5 @@
 function htmlCssGenerator (difficulty=4, maxOfBranches=3, indent=0) {
-    currentExercise = ""
+    currentExercise = "Zrob layout ktory zawiera nastepujace elementy: "
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
@@ -56,7 +56,8 @@ function htmlCssGenerator (difficulty=4, maxOfBranches=3, indent=0) {
     
     createTree(difficulty, maxOfBranches, indent)
 
-    return `<pre>${currentExercise}</pre>`
+    return `<pre>${currentExercise}
+    </pre>`
 
     function createTree(difficulty, maxOfBranches, indent) {
     
@@ -67,7 +68,7 @@ function htmlCssGenerator (difficulty=4, maxOfBranches=3, indent=0) {
         const numberOfBranches = helpers.getRandomInt(maxOfBranches) +2
         let direction = ''
         if(numberOfBranches>1) {
-            direction = `dzieci ${getDirection()};`
+            direction = `${getFinalIndent(indent*2)} ${numberOfBranches} elementy ${getDirection()}:`
             currentExercise += withNewLine(direction)
         }
         for(let i=0; i< numberOfBranches;i++) {
@@ -81,7 +82,7 @@ function htmlCssGenerator (difficulty=4, maxOfBranches=3, indent=0) {
         for (let i = 0; i < indent; i++) {
             finalIndent += "-"
         }
-        return finalIndent + ">"
+        return finalIndent
     }
 }
 
