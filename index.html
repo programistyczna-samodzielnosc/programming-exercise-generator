@@ -16,7 +16,10 @@
         <script src="jsGenerator.js"></script>
         <script>
             function wyswietlZadanie(exerciseGenerator) {
-                let trescZadania = exerciseGenerator()
+                let opcjaGlebokosc = document.querySelector('.opcja__glebokosc').value
+                let opcjaSzerokosc = document.querySelector('.opcja__szerokosc').value - 1
+                
+                let trescZadania = exerciseGenerator(opcjaGlebokosc,opcjaSzerokosc)
                 document.getElementById('tresc').innerHTML = trescZadania;
             }
         </script>
@@ -24,6 +27,18 @@
     <body>
         <div class="losowanie">
             <h1>Losowanie</h1>
+            <div class="opcje">
+                <table>
+                    <tr>
+                        <td>Poziom drzewa</td>
+                        <td>Maks liczba zadan na poziomie</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Poziom drzewa" value="2" class="opcja opcja__glebokosc"></td>
+                        <td><input type="text" placeholder="Maks liczba zadan na poziomie" value="3" class="opcja opcja__szerokosc"></td>
+                    </tr>
+                </table>  
+            </div>
             <button onclick="wyswietlZadanie(htmlCssGenerator)">Zadanie HTML/CSS</button>
             <button onclick="wyswietlZadanie(jsGenerator)">Zadanie Javascript</button>
             <div id="tresc">
