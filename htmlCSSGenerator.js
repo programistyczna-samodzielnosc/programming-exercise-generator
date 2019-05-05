@@ -1,9 +1,12 @@
 console.log(`Zadanie domowe: ${new Date()}`)
 console.log('Stworz layout strony internetowej: ')
 
-const helpers = require('./helpers')
-
-let elementsCount1 = 3
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+const helpers = {
+    getRandomInt
+}
 
 function getDirection() {
     let result = helpers.getRandomInt(2) // 0 lub 1
@@ -47,25 +50,35 @@ function manyExercises(number=3) {
     }
     return output;
 }
-
-function createTree(difficulty=4, maxOfBranches=3, indent=0) {
-    if(difficulty === 0) {
-        return
-    }
-
-    const numberOfBranches = helpers.getRandomInt(maxOfBranches) +2
-    let direction = ''
-    if(numberOfBranches>1) {
-        direction = `dzieci ${getDirection()};`
-        console.log(direction)
-    }
-    for(let i=0; i< numberOfBranches;i++) {
-        console.log(`${getFinalIndent(indent*2)} element ${i+1}:  ${manyExercises()}`)
-        createTree(helpers.getRandomInt(difficulty), maxOfBranches, indent+1);   
-    }
+function withNewLine(text) {
+    return `\n${text}`
 }
 
-createTree()
+var htmlCssGenerator = function () {
+    currentExercise = ""
+
+    createTree()
+
+    return `<pre>${currentExercise}</pre>`
+
+    function createTree(difficulty=4, maxOfBranches=3, indent=0) {
+    
+        if(difficulty === 0) {
+            return
+        }
+    
+        const numberOfBranches = helpers.getRandomInt(maxOfBranches) +2
+        let direction = ''
+        if(numberOfBranches>1) {
+            direction = `dzieci ${getDirection()};`
+            currentExercise += withNewLine(direction)
+        }
+        for(let i=0; i< numberOfBranches;i++) {
+            currentExercise += withNewLine(`${getFinalIndent(indent*2)} element ${i+1}:  ${manyExercises()}`)
+            createTree(helpers.getRandomInt(difficulty), maxOfBranches, indent+1);   
+        }
+    }
+}
 
 function getFinalIndent(indent) {
     let finalIndent = ""
