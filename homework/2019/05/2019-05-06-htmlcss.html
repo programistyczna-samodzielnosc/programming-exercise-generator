@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zadanko 6 maja 2019</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    .page {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+    }
+
+    .column1 {
+        background: linear-gradient(green, darkblue);
+        border: 1px solid red;
+        color: white;
+    }
+
+    .column__kurczak {
+        height: inherit;
+        background-image: url(chicken.jpg);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .description {
+        color: red;
+    }
+
+    header {
+        background-color: brown;
+        color: white;
+        font-size: 30px;
+        opacity: 0.1;
+    }
+    .welcome {
+        border: 5px dashed green;
+        border-radius:10px;
+        background: linear-gradient(yellow,red)
+    }
+
+    .column2 {
+        background-image: url(chicken.jpg);
+        background-size:30px;
+        color:pink;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .column3 {
+        font-size:40px;
+        background:radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+    }
+</style>
+
+<body>
+    <div class="page">
+        <div class="column column1">
+            <div class="column__kurczak">
+                <nav>
+                    <div class="description">
+                        <p>Opis naszego kurczaka i pieknej laki oraz rzeki
+
+                            <a href="https://pl.wikipedia.org/wiki/Kura_domowa">Zobacz kurę</a>
+
+                        </p>
+                    </div>
+                    <header>
+                        <h2>Naglowek</h2>
+                        <a href="https://pl.wikipedia.org/wiki/Kura_domowa">Zobacz kurę</a>
+                    </header>
+                    <div class="welcome">
+                        Siema na naszej stronie
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <div class="column column2">
+            asdfasdf
+            <a href="https://pl.wikipedia.org/wiki/Kura_domowa">Zobacz kurę</a>
+        <p>Kura skacze</p>
+        </div>
+        <div class="column column3">
+            <button onclick="alert('Co sie dzialo na kadrze?')">Kadra</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+dzieci poziomo;
+> element 1:  obrazek; gradient; ramka dookola; 
+dzieci pionowo;
+--> element 1:  akapit tekstu; link do jakiejs strony; zmien kolor czcionki; 
+--> element 2:  kolor tla; zmien rozmiar czcionki; link do jakiejs strony; 
+--> element 3:  ramka dookola; gradient; kolor tla; 
+> element 2:  link do jakiejs strony; tekst z tlem obrazka; akapit tekstu; 
+> element 3:  przycisk; zmien rozmiar czcionki; gradient; 
