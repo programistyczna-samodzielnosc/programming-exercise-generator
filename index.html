@@ -1,51 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Stronka generujaca zadania</title>
-        <style>
-            pre {
-                padding:20px;
-                background-color: bisque;
-                border:1px solid black;
-                border-radius: 5px;
-                overflow-y: auto;
+
+<head>
+    <meta charset="utf-8">
+    <title>Stronka generujaca zadania</title>
+    <style>
+        pre {
+            padding: 20px;
+            background-color: bisque;
+            border: 1px solid black;
+            border-radius: 5px;
+            overflow-y: auto;
+        }
+
+        .opcje {
+            display: flex;
+        }
+
+        .opcja {
+            flex: 1;
+        }
+
+        input {
+            width: 50px;
+        }
+    </style>
+    <script src="htmlCSSGenerator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="jsGenerator.js"></script>
+    <script>
+        function tajnaOperacja(kryptonim) {
+            switch (kryptonim) {
+                case 'Alfa': console.log('wysli team alfa do Afryki'); break;
+                case 'Beta': console.log('wyslij team beta do Belgii'); break;
+                case 'C': console.log('wyslij Cypriana do Pragi'); break;
+                case 'D': console.log('wyslij Dominika do Danii'); break;
+                case 'E': console.log('wyslij Ernesta nad Eufrat'); break;
+                default: console.log('wyslij Policje za falszywe zgloszenie');
             }
-        </style>
-        <script src="htmlCSSGenerator.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-        <script src="jsGenerator.js"></script>
-        <script>
-            function wyswietlZadanie(exerciseGenerator) {
-                let opcjaGlebokosc = document.querySelector('.opcja__glebokosc').value
-                let opcjaSzerokosc = document.querySelector('.opcja__szerokosc').value - 1
-                
-                let trescZadania = exerciseGenerator(opcjaGlebokosc,opcjaSzerokosc)
-                document.getElementById('tresc').innerHTML = trescZadania;
+        }
+        function wyswietlZadanie(exerciseGenerator) {
+            let trescZadania = ""
+
+            switch (exerciseGenerator) {
+                case htmlCssGenerator: {
+                    trescZadania = exerciseGenerator();
+                    break;
+                }
+                case jsGenerator: {
+                    let opcjaGlebokosc = document.querySelector('.opcja__glebokosc').value
+                    let opcjaSzerokosc = document.querySelector('.opcja__szerokosc').value - 1
+                    trescZadania = exerciseGenerator(opcjaGlebokosc, opcjaSzerokosc)
+                    break;
+                }
             }
-        </script>
-    </head>
-    <body>
-        <div class="losowanie">
-            <h1>Losowanie</h1>
-            <div class="opcje">
+
+            document.getElementById('tresc').innerHTML = trescZadania;
+
+
+        }
+        function wyswietlLekcje(nr) {
+            document.getElementById('tresc').innerHTML = lessonsGenerator(nr);
+        }
+
+        function lessonsGenerator(nr) {
+            switch (nr) {
+                case 1: return '<iframe width="560" height="315" src="https://www.youtube.com/embed/ES5GGm6M7So" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                case 2: return '<iframe width="560" height="315" src="https://www.youtube.com/embed/ilD15BtfdXI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                case 3: return '<iframe width="560" height="315" src="https://www.youtube.com/embed/UPTqykY60qU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                case 4: return '<iframe width="560" height="315" src="https://www.youtube.com/embed/UFOu5ErYU2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                case 5: return '<iframe width="560" height="315" src="https://www.youtube.com/embed/tAebjnyki2s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="losowanie">
+        <h1>Losowanie</h1>
+        <div class="opcje">
+            <div class="opcja opcja__htmlcss">
                 <table>
                     <tr>
-                        <td>Poziom drzewa</td>
-                        <td>Maks liczba zadan na poziomie</td>
+                        <td>
+                            <label>Glebokosc zadania(poziom)</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Poziom drzewa" value="2" class="opcja opcja__glebokosc">
+                        </td>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="Poziom drzewa" value="2" class="opcja opcja__glebokosc"></td>
-                        <td><input type="text" placeholder="Maks liczba zadan na poziomie" value="3" class="opcja opcja__szerokosc"></td>
+                        <td>
+                            <label>Maks Liczba elementow na poziomie</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Maks liczba zadan na poziomie" value="3"
+                                class="opcja opcja__szerokosc">
+                        </td>
                     </tr>
-                </table>  
+                </table>
+                <div>
+                    <button onclick="wyswietlZadanie(htmlCssGenerator)">Zadanie HTML/CSS</button>
+                </div>
+
+
             </div>
-            <button onclick="wyswietlZadanie(htmlCssGenerator)">Zadanie HTML/CSS</button>
-            <button onclick="wyswietlZadanie(jsGenerator)">Zadanie Javascript</button>
-            <div id="tresc">
-                Treść zadania
+            <div class="opcja opcja__underscore">
+                <button onclick="wyswietlZadanie(jsGenerator)">Zadanie Javascript</button>
+            </div>
+            <div class="opcja opcja__cwiczenia">
+                <button onclick="wyswietlLekcje(1)">Lekcja 1</button>
+                <button onclick="wyswietlLekcje(2)">Lekcja 2</button>
+                <button onclick="wyswietlLekcje(3)">Lekcja 3</button>
+                <button onclick="wyswietlLekcje(4)">Lekcja 4</button>
+                <button onclick="wyswietlLekcje(5)">Lekcja 5</button>
             </div>
         </div>
-       
-    </body>
+
+
+        <div id="tresc">
+            Treść zadania
+        </div>
+        <div id="filmiki">
+
+
+        </div>
+    </div>
+
+</body>
+
 </html>
