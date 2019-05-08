@@ -43,11 +43,11 @@
             let trescZadania = ""
 
             switch (exerciseGenerator) {
-                case htmlCssGenerator: {
+                case jsGenerator: {
                     trescZadania = exerciseGenerator();
                     break;
                 }
-                case jsGenerator: {
+                case htmlCssGenerator: {
                     let opcjaGlebokosc = document.querySelector('.opcja__glebokosc').value
                     let opcjaSzerokosc = document.querySelector('.opcja__szerokosc').value - 1
                     trescZadania = exerciseGenerator(opcjaGlebokosc, opcjaSzerokosc)
